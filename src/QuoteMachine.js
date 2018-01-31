@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import './QuoteMachine.css';
 
 class QuoteMachine extends Component {
@@ -43,8 +43,8 @@ class QuoteMachine extends Component {
         const { author, quote } = this.state.currentQuote;
         return (
             <div>
-                <p>{quote}</p>
-                <p>{author}</p>
+                <p id="text">{quote}</p>
+                <p id="author">{author}</p>
             </div>
         )
     }
@@ -53,7 +53,7 @@ class QuoteMachine extends Component {
         const thisQuote = this.state.currentQuote.quote;
         const thisAuthor = this.state.currentQuote.author;
         return (
-            <a href={`https://twitter.com/intent/tweet?text="${thisQuote}" ~${thisAuthor}
+            <a id="tweet-quote" href={`https://twitter.com/intent/tweet?text="${thisQuote}" ~${thisAuthor}
 
             https://syknapse.github.io/Syk-Houdeib/ random quote by @Syknapse`} // Modify url and text
                 target="_blank">
@@ -65,9 +65,9 @@ class QuoteMachine extends Component {
     render(){
         const { hasQuote } = this.state;
         return (
-            <Fragment>
+            <div>
                 <h1>Quote Machine</h1>
-                <button onClick={this.getRandomQuote}>
+                <button id="new-quote" onClick={this.getRandomQuote}>
                     Get A Random Quote!!
                 </button>
                 <br />
@@ -75,7 +75,7 @@ class QuoteMachine extends Component {
                     this.renderQuote()
                     : '⏳'}
                 {this.tweet()}
-            </Fragment>
+            </div>
         )
     }
 }
