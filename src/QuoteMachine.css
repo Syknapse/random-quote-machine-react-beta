@@ -1,4 +1,28 @@
-/* .QuoteMachine {
-    color: blue;
-    border: 1px solid;
-} */
+#quote-box {
+    padding: 10px;
+    border: 1px solid gray;
+    height: 60vh;
+    width: 90vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+#tweet-quote-btn,
+#new-quote {
+    width: 200px;
+    padding: 5px;
+}
+
+.fa-quote-left {
+    font-size: 40px;
+    margin-right: 20px;
+    color: gray;
+}

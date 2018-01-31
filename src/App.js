@@ -5,7 +5,7 @@ import QuoteMachine from './QuoteMachine';
 class App extends Component {
   render() {
     return (
-      <div className="App" id="quote-box">
+      <div className="App">
         <QuoteMachine />
       </div>
     );

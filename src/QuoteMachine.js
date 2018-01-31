@@ -43,8 +43,11 @@ class QuoteMachine extends Component {
         const { author, quote } = this.state.currentQuote;
         return (
             <div>
-                <p id="text">{quote}</p>
-                <p id="author">{author}</p>
+                <p id="text">
+                    <span><i className="fa fa-quote-left"></i></span>
+                    {quote}"
+                </p>
+                <p id="author">~ {author}</p>
             </div>
         )
     }
@@ -57,7 +60,7 @@ class QuoteMachine extends Component {
 
             https://syknapse.github.io/Syk-Houdeib/ random quote by @Syknapse`} // Modify url and text
                 target="_blank">
-                <button>twitter</button>
+                <button id="tweet-quote-btn" title="Tweet this quote"><i className="fa fa-twitter"></i></button>
             </a>
         )
     }
@@ -65,16 +68,18 @@ class QuoteMachine extends Component {
     render(){
         const { hasQuote } = this.state;
         return (
-            <div>
+            <div id="quote-box">
                 <h1>Quote Machine</h1>
-                <button id="new-quote" onClick={this.getRandomQuote}>
-                    Get A Random Quote!!
-                </button>
                 <br />
                 {hasQuote === true ?
                     this.renderQuote()
-                    : '⏳'}
-                {this.tweet()}
+                    : <span><i className="fa fa-spinner"></i></span>}<br />
+                <div className="buttons">
+                    {this.tweet()}
+                    <button id="new-quote" onClick={this.getRandomQuote} title="Most of these are truly meaningless!">
+                        Get A Random Quote!!
+                    </button>
+                </div>
             </div>
         )
     }
