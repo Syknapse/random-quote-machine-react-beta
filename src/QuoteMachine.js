@@ -42,9 +42,9 @@ class QuoteMachine extends Component {
     renderQuote = () => {
         const { author, quote } = this.state.currentQuote;
         return (
-            <div>
+            <div id="quote-text">
                 <p id="text">
-                    <span><i className="fa fa-quote-left"></i></span>
+                    <span className="quote-left">"</span>
                     {quote}"
                 </p>
                 <p id="author">~ {author}</p>
@@ -69,7 +69,7 @@ class QuoteMachine extends Component {
         const { hasQuote } = this.state;
         return (
             <div id="quote-box">
-                <h1>Quote Machine</h1>
+                <h1>QUOTE MACHINE</h1>
                 <br />
                 {hasQuote === true ?
                     this.renderQuote()
@@ -77,7 +77,7 @@ class QuoteMachine extends Component {
                 <div className="buttons">
                     {this.tweet()}
                     <button id="new-quote" onClick={this.getRandomQuote} title="Most of these are truly meaningless!">
-                        Get A Random Quote!!
+                        Get A Random Quote
                     </button>
                 </div>
             </div>
