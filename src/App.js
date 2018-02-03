@@ -120,6 +120,10 @@ class App extends Component {
           }}
         />
         <QuoteMachine />
+        <footer>
+        <a href="https://syknapse.github.io/Syk-Houdeib/" target="_blank">Syk Houdeib 2018 </a>
+        <a href="https://github.com/Syknapse/random-quote-machine-react-beta" target="_blank"><i className="fa fa-github"></i></a>
+        </footer>
       </div>
     );
   }

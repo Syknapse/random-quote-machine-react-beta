@@ -56,10 +56,7 @@ class QuoteMachine extends Component {
         const thisQuote = this.state.currentQuote.quote;
         const thisAuthor = this.state.currentQuote.author;
         return (
-            <a id="tweet-quote" href={`https://twitter.com/intent/tweet?text="${thisQuote}" ~${thisAuthor}
-
-            https://syknapse.github.io/Syk-Houdeib/ random quote by @Syknapse`} // Modify url and text
-                target="_blank">
+            <a id="tweet-quote" href={`https://twitter.com/intent/tweet?text="${thisQuote}" ~${thisAuthor} http://totally-random-quote-machine.surge.sh by @Syknapse`} target="_blank">
                 <button id="tweet-quote-btn" title="Tweet this quote"><i className="fa fa-twitter"></i></button>
             </a>
         )

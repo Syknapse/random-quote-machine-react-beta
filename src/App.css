@@ -19,9 +19,21 @@ canvas {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   overflow: auto;
+}
+
+footer {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.2em;
+  z-index: 1;
+  margin-bottom: 5px;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.562);
 }
 
 
